@@ -18,9 +18,14 @@ public class ProductTest {
 
     @Test
     public void checkProductPrice() {
+
+        double output;
+        double expected = 180;
+        double delta = 0.01;
         // I am making this test to fail
         Product aProduct = new Product("1", "DELL MONITOR", 180);
-        assertEquals("Check the price of the product", "180", aProduct.getPrice());
+        output = aProduct.getPrice();
+        assertEquals(output, expected, delta);
     }
 
 
